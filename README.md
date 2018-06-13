@@ -1,10 +1,10 @@
 # backlog_lookup
-Using OpenRefine and OCLC's WorldCat Search APIs, the process automatically searches WorldCat cataloging copy by LCCN, ISBN, and NETWORK_NUMBERe (OCLC number) This automates the work of backlog searching.
+Using OpenRefine and OCLC's WorldCat Search APIs, the process automates the work of backlog searching. It automatically searches WorldCat for cataloging copy by LCCN, ISBN, and NETWORK_NUMBER (OCLC number) .
 
 # What you need
 1. OpenRefine (openrefine.org)
 2. Your own WSKey (https://www.oclc.org/developer/develop/authentication/how-to-request-a-wskey.en.html)
-3. Spreadsheet that contains columns: BIB_ID, MFHD_ID, TITLE_BRIEF, BEGIN_PUB_DATE, LANGUAGE, DISPLAY_CALL_NO, LCCN, ISBN, NETWORK_NUMBER in that order.
+3. Spreadsheet that contains the following columns: BIB_ID, MFHD_ID, TITLE_BRIEF, BEGIN_PUB_DATE, LANGUAGE, DISPLAY_CALL_NO, LCCN, ISBN, NETWORK_NUMBER in that order.
 
 # Steps
 1. Replace {YOUR_WSKEY} with your own wskey in backlog-lookup.txt.
