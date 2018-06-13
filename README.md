@@ -14,3 +14,6 @@ Using OpenRefine and OCLC's WorldCat Search APIs, the process automatically sear
 5. Click "Perform Operations."
 6. If the process finds good matching records, it returns OCLC number, call number, existence of LC Subject Headings, and encoding level.
 7. The process considers OCLC records with English cataloging language, encoding levels (blank, 1, 4, I, M) and LC Subject Headings (except for fictions) acceptable for copy cataloging.
+
+# Demo
+https://youtu.be/2TY6RHxEe0E
