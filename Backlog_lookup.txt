@@ -167,7 +167,7 @@
   },
   {
     "op": "core/column-addition",
-    "description": "Create column SUBJECT1 at index 8 based on column API1 using expression grel:if(length(value.partition('ind2=\"0\" tag=\"600\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"610\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"611\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"630\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"650\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"651\">')[1])>=1,'Yes',\nif(value.partition('<controlfield tag=\"008\">')[2].partition('</controlfield>')[0].toString()[-7] == '0', 'No', 'No (Fiction)')))))))",
+    "description": "Create column SUBJECT1 at index 8 based on column API1 using expression grel:if(length(value.partition('ind2=\"0\" tag=\"600\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"610\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"611\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"630\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"650\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"651\">')[1])>=1,'Yes', if(and(not(value.partition('<controlfield tag=\"008\">')[2].partition('</controlfield>')[0].toString()[-7] == '0'), value.parseHtml().select('leader').toString().splitByLengths(17,1)[1] == 'a'), 'No (Fiction)', 'No')))))))",
     "engineConfig": {
       "mode": "row-based",
       "facets": [
@@ -195,7 +195,7 @@
     "newColumnName": "SUBJECT1",
     "columnInsertIndex": 8,
     "baseColumnName": "API1",
-    "expression": "grel:if(length(value.partition('ind2=\"0\" tag=\"600\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"610\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"611\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"630\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"650\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"651\">')[1])>=1,'Yes',\nif(value.partition('<controlfield tag=\"008\">')[2].partition('</controlfield>')[0].toString()[-7] == '0', 'No', 'No (Fiction)')))))))",
+    "expression": "grel:if(length(value.partition('ind2=\"0\" tag=\"600\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"610\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"611\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"630\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"650\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"651\">')[1])>=1,'Yes', if(and(not(value.partition('<controlfield tag=\"008\">')[2].partition('</controlfield>')[0].toString()[-7] == '0'), value.parseHtml().select('leader').toString().splitByLengths(17,1)[1] == 'a'), 'No (Fiction)', 'No')))))))",
     "onError": "set-to-blank"
   },
   {
@@ -853,7 +853,7 @@
   },
   {
     "op": "core/column-addition",
-    "description": "Create column SUBJECT2 at index 13 based on column API2 using expression grel:if(length(value.partition('ind2=\"0\" tag=\"600\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"610\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"611\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"630\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"650\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"651\">')[1])>=1,'Yes',\nif(value.partition('<controlfield tag=\"008\">')[2].partition('</controlfield>')[0].toString()[-7] == '0', 'No', 'No (Fiction)')))))))",
+    "description": "Create column SUBJECT2 at index 13 based on column API2 using expression grel:if(length(value.partition('ind2=\"0\" tag=\"600\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"610\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"611\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"630\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"650\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"651\">')[1])>=1,'Yes', if(and(not(value.partition('<controlfield tag=\"008\">')[2].partition('</controlfield>')[0].toString()[-7] == '0'), value.parseHtml().select('leader').toString().splitByLengths(17,1)[1] == 'a'), 'No (Fiction)', 'No')))))))",
     "engineConfig": {
       "mode": "row-based",
       "facets": [
@@ -900,7 +900,7 @@
     "newColumnName": "SUBJECT2",
     "columnInsertIndex": 13,
     "baseColumnName": "API2",
-    "expression": "grel:if(length(value.partition('ind2=\"0\" tag=\"600\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"610\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"611\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"630\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"650\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"651\">')[1])>=1,'Yes',\nif(value.partition('<controlfield tag=\"008\">')[2].partition('</controlfield>')[0].toString()[-7] == '0', 'No', 'No (Fiction)')))))))",
+    "expression": "grel:if(length(value.partition('ind2=\"0\" tag=\"600\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"610\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"611\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"630\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"650\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"651\">')[1])>=1,'Yes', if(and(not(value.partition('<controlfield tag=\"008\">')[2].partition('</controlfield>')[0].toString()[-7] == '0'), value.parseHtml().select('leader').toString().splitByLengths(17,1)[1] == 'a'), 'No (Fiction)', 'No')))))))",
     "onError": "set-to-blank"
   },
   {
@@ -1653,7 +1653,7 @@
   },
   {
     "op": "core/column-addition",
-    "description": "Create column SUBJECT3 at index 13 based on column API3 using expression grel:if(length(value.partition('ind2=\"0\" tag=\"600\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"610\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"611\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"630\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"650\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"651\">')[1])>=1,'Yes',\nif(value.partition('<controlfield tag=\"008\">')[2].partition('</controlfield>')[0].toString()[-7] == '0', 'No', 'No (Fiction)')))))))",
+    "description": "Create column SUBJECT3 at index 13 based on column API3 using expression grel:if(length(value.partition('ind2=\"0\" tag=\"600\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"610\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"611\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"630\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"650\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"651\">')[1])>=1,'Yes', if(and(not(value.partition('<controlfield tag=\"008\">')[2].partition('</controlfield>')[0].toString()[-7] == '0'), value.parseHtml().select('leader').toString().splitByLengths(17,1)[1] == 'a'), 'No (Fiction)', 'No')))))))",
     "engineConfig": {
       "mode": "row-based",
       "facets": [
@@ -1700,7 +1700,7 @@
     "newColumnName": "SUBJECT3",
     "columnInsertIndex": 13,
     "baseColumnName": "API3",
-    "expression": "grel:if(length(value.partition('ind2=\"0\" tag=\"600\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"610\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"611\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"630\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"650\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"651\">')[1])>=1,'Yes',\nif(value.partition('<controlfield tag=\"008\">')[2].partition('</controlfield>')[0].toString()[-7] == '0', 'No', 'No (Fiction)')))))))",
+    "expression": "grel:if(length(value.partition('ind2=\"0\" tag=\"600\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"610\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"611\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"630\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"650\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"651\">')[1])>=1,'Yes', if(and(not(value.partition('<controlfield tag=\"008\">')[2].partition('</controlfield>')[0].toString()[-7] == '0'), value.parseHtml().select('leader').toString().splitByLengths(17,1)[1] == 'a'), 'No (Fiction)', 'No')))))))",
     "onError": "set-to-blank"
   },
   {
@@ -2566,7 +2566,7 @@
   },
   {
     "op": "core/column-addition",
-    "description": "Create column SUBJECT4 at index 14 based on column API4 using expression grel:if(length(value.partition('ind2=\"0\" tag=\"600\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"610\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"611\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"630\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"650\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"651\">')[1])>=1,'Yes',\nif(value.partition('<controlfield tag=\"008\">')[2].partition('</controlfield>')[0].toString()[-7] == '0', 'No', 'No (Fiction)')))))))",
+    "description": "Create column SUBJECT4 at index 14 based on column API4 using expression grel:if(length(value.partition('ind2=\"0\" tag=\"600\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"610\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"611\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"630\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"650\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"651\">')[1])>=1,'Yes', if(and(not(value.partition('<controlfield tag=\"008\">')[2].partition('</controlfield>')[0].toString()[-7] == '0'), value.parseHtml().select('leader').toString().splitByLengths(17,1)[1] == 'a'), 'No (Fiction)', 'No')))))))",
     "engineConfig": {
       "mode": "row-based",
       "facets": [
@@ -2613,7 +2613,7 @@
     "newColumnName": "SUBJECT4",
     "columnInsertIndex": 14,
     "baseColumnName": "API4",
-    "expression": "grel:if(length(value.partition('ind2=\"0\" tag=\"600\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"610\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"611\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"630\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"650\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"651\">')[1])>=1,'Yes',\nif(value.partition('<controlfield tag=\"008\">')[2].partition('</controlfield>')[0].toString()[-7] == '0', 'No', 'No (Fiction)')))))))",
+    "expression": "grel:if(length(value.partition('ind2=\"0\" tag=\"600\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"610\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"611\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"630\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"650\">')[1])>=1,'Yes', if(length(value.partition('ind2=\"0\" tag=\"651\">')[1])>=1,'Yes', if(and(not(value.partition('<controlfield tag=\"008\">')[2].partition('</controlfield>')[0].toString()[-7] == '0'), value.parseHtml().select('leader').toString().splitByLengths(17,1)[1] == 'a'), 'No (Fiction)', 'No')))))))",
     "onError": "set-to-blank"
   },
   {
