@@ -134,7 +134,7 @@
   },
   {
     "op": "core/column-addition",
-    "description": "Create column CALL_NO1 at index 8 based on column API1 using expression grel:value.partition('tag=\"050\">')[2].partition('</datafield>')[0].replace(/\\<subfield code=\\\".\\\"\\>/,'').replace('</subfield>','').replace(/\\n/,'').trim().replace('     ','')",
+    "description": "Create column CALL_NO1 at index 8 based on column API1 using expression grel:value.parseHtml().select('datafield[tag=050]')[0].htmlText()",
     "engineConfig": {
       "mode": "row-based",
       "facets": [
@@ -162,7 +162,7 @@
     "newColumnName": "CALL_NO1",
     "columnInsertIndex": 8,
     "baseColumnName": "API1",
-    "expression": "grel:value.partition('tag=\"050\">')[2].partition('</datafield>')[0].replace(/\\<subfield code=\\\".\\\"\\>/,'').replace('</subfield>','').replace(/\\n/,'').trim().replace('     ','')",
+    "expression": "grel:value.parseHtml().select('datafield[tag=050]')[0].htmlText()",
     "onError": "set-to-blank"
   },
   {
@@ -801,7 +801,7 @@
   },
   {
     "op": "core/column-addition",
-    "description": "Create column CALL_NO2 at index 13 based on column API2 using expression grel:value.partition('tag=\"050\">')[2].partition('</datafield>')[0].replace(/\\<subfield code=\\\".\\\"\\>/,'').replace('</subfield>','').replace(/\\n/,'').trim().replace('     ','')",
+    "description": "Create column CALL_NO2 at index 13 based on column API2 using expression grel:value.parseHtml().select('datafield[tag=050]')[0].htmlText()",
     "engineConfig": {
       "mode": "row-based",
       "facets": [
@@ -848,7 +848,7 @@
     "newColumnName": "CALL_NO2",
     "columnInsertIndex": 13,
     "baseColumnName": "API2",
-    "expression": "grel:value.partition('tag=\"050\">')[2].partition('</datafield>')[0].replace(/\\<subfield code=\\\".\\\"\\>/,'').replace('</subfield>','').replace(/\\n/,'').trim().replace('     ','')",
+    "expression": "grel:value.parseHtml().select('datafield[tag=050]')[0].htmlText()",
     "onError": "set-to-blank"
   },
   {
@@ -1601,7 +1601,7 @@
   },
   {
     "op": "core/column-addition",
-    "description": "Create column CALL_NO3 at index 13 based on column API3 using expression grel:value.partition('tag=\"050\">')[2].partition('</datafield>')[0].replace(/\\<subfield code=\\\".\\\"\\>/,'').replace('</subfield>','').replace(/\\n/,'').trim().replace('     ','').replace(/\\n/,'').trim().replace('     ','')",
+    "description": "Create column CALL_NO3 at index 13 based on column API3 using expression grel:value.parseHtml().select('datafield[tag=050]')[0].htmlText()",
     "engineConfig": {
       "mode": "row-based",
       "facets": [
@@ -1648,7 +1648,7 @@
     "newColumnName": "CALL_NO3",
     "columnInsertIndex": 13,
     "baseColumnName": "API3",
-    "expression": "grel:value.partition('tag=\"050\">')[2].partition('</datafield>')[0].replace(/\\<subfield code=\\\".\\\"\\>/,'').replace('</subfield>','').replace(/\\n/,'').trim().replace('     ','').replace(/\\n/,'').trim().replace('     ','')",
+    "expression": "grel:value.parseHtml().select('datafield[tag=050]')[0].htmlText()",
     "onError": "set-to-blank"
   },
   {
@@ -1757,7 +1757,7 @@
   },
   {
     "op": "core/column-addition",
-    "description": "Create column Lang3 at index 13 based on column API3 using expression grel:value.partition('tag=\\\"040\\\">')[2].partition('code=\\\"b\\\">')[2].splitByLengths(3)[0]",
+    "description": "Create column Lang3 at index 13 based on column API3 using expression grel:value.parseHtml().select('datafield[tag=040]>subfield[code=b]')[0].htmlText()",
     "engineConfig": {
       "mode": "row-based",
       "facets": [
@@ -1804,7 +1804,7 @@
     "newColumnName": "Lang3",
     "columnInsertIndex": 13,
     "baseColumnName": "API3",
-    "expression": "grel:value.partition('tag=\\\"040\\\">')[2].partition('code=\\\"b\\\">')[2].splitByLengths(3)[0]",
+    "expression": "grel:value.parseHtml().select('datafield[tag=040]>subfield[code=b]')[0].htmlText()",
     "onError": "set-to-blank"
   },
   {
@@ -2514,7 +2514,7 @@
   },
   {
     "op": "core/column-addition",
-    "description": "Create column CALL_NO4 at index 14 based on column API4 using expression grel:value.partition('tag=\"050\">')[2].partition('</datafield>')[0].replace(/\\<subfield code=\\\".\\\"\\>/,'').replace('</subfield>','').replace(/\\n/,'').trim().replace('     ','')",
+    "description": "Create column CALL_NO4 at index 14 based on column API4 using expression grel:value.parseHtml().select('datafield[tag=050]')[0].htmlText()",
     "engineConfig": {
       "mode": "row-based",
       "facets": [
@@ -2561,7 +2561,7 @@
     "newColumnName": "CALL_NO4",
     "columnInsertIndex": 14,
     "baseColumnName": "API4",
-    "expression": "grel:value.partition('tag=\"050\">')[2].partition('</datafield>')[0].replace(/\\<subfield code=\\\".\\\"\\>/,'').replace('</subfield>','').replace(/\\n/,'').trim().replace('     ','')",
+    "expression": "grel:value.parseHtml().select('datafield[tag=050]')[0].htmlText()",
     "onError": "set-to-blank"
   },
   {
@@ -2670,7 +2670,7 @@
   },
   {
     "op": "core/column-addition",
-    "description": "Create column Lang4 at index 14 based on column API4 using expression grel:value.partition('tag=\\\"040\\\">')[2].partition('code=\\\"b\\\">')[2].splitByLengths(3)[0]",
+    "description": "Create column Lang4 at index 14 based on column API4 using expression grel:value.parseHtml().select('datafield[tag=040]>subfield[code=b]')[0].htmlText()",
     "engineConfig": {
       "mode": "row-based",
       "facets": [
@@ -2717,7 +2717,7 @@
     "newColumnName": "Lang4",
     "columnInsertIndex": 14,
     "baseColumnName": "API4",
-    "expression": "grel:value.partition('tag=\\\"040\\\">')[2].partition('code=\\\"b\\\">')[2].splitByLengths(3)[0]",
+    "expression": "grel:value.parseHtml().select('datafield[tag=040]>subfield[code=b]')[0].htmlText()",
     "onError": "set-to-blank"
   },
   {
