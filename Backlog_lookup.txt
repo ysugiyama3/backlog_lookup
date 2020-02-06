@@ -94,7 +94,7 @@
     "newColumnName": "API1",
     "columnInsertIndex": 7,
     "baseColumnName": "LCCN",
-    "urlExpression": "grel:'http://www.worldcat.org/webservices/catalog/search/sru?query=srw.dn=' + value + '&servicelevel=full&frbrGrouping=off&maximumRecords=1&wskey={YOUR_WSKEY}'",
+    "urlExpression": "grel:'http://www.worldcat.org/webservices/catalog/search/sru?query=srw.dn=%22' + value + '%22&servicelevel=full&frbrGrouping=off&maximumRecords=1&wskey={YOUR_WSKEY}'",
     "onError": "set-to-blank",
     "delay": 300,
     "cacheResponses": true
@@ -742,7 +742,7 @@
     "newColumnName": "API2",
     "columnInsertIndex": 12,
     "baseColumnName": "ISBN",
-    "urlExpression": "grel:'http://www.worldcat.org/webservices/catalog/search/sru?query=srw.bn=' + value + '+and+srw.pc=%22dlc%22&servicelevel=full&frbrGrouping=off&maximumRecords=1&wskey={YOUR_WSKEY}'",
+    "urlExpression": "grel:'http://www.worldcat.org/webservices/catalog/search/sru?query=srw.bn=%22' + value + '%22+and+srw.pc=%22dlc%22&servicelevel=full&frbrGrouping=off&maximumRecords=1&wskey={YOUR_WSKEY}'",
     "onError": "set-to-blank",
     "delay": 300,
     "cacheResponses": true
@@ -1542,7 +1542,7 @@
     "newColumnName": "API3",
     "columnInsertIndex": 12,
     "baseColumnName": "ISBN",
-    "urlExpression": "grel:'http://www.worldcat.org/webservices/catalog/search/sru?query=srw.bn=' + value + '+not+srw.mt=%22com%22&sortKeys=LibraryCount%2C%2C0&servicelevel=full&frbrGrouping=off&maximumRecords=1&wskey={YOUR_WSKEY}'",
+    "urlExpression": "grel:'http://www.worldcat.org/webservices/catalog/search/sru?query=srw.bn=%22' + value + '%22+not+srw.mt=%22com%22&sortKeys=LibraryCount%2C%2C0&servicelevel=full&frbrGrouping=off&maximumRecords=1&wskey={YOUR_WSKEY}'",
     "onError": "set-to-blank",
     "delay": 300,
     "cacheResponses": true
